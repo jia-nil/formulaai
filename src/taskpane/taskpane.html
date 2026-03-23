@@ -431,14 +431,11 @@
 
     <script>
       // ─────────────────────────────────────────────────
-      //  !! FILL THESE IN !!
+      //  CONFIG — no API key here, it lives on the server
       // ─────────────────────────────────────────────────
-     
-     
-      const GUMROAD_PRODUCT_PERMALINK = import.meta.env.VITE_GUMROAD_PRODUCT_PERMALINK;
-      const GUMROAD_PAGE_URL = import.meta.env.VITE_GUMROAD_PAGE_URL;
-      const FREE_LIMIT = Number(import.meta.env.VITE_FREE_LIMIT);
-      const MODEL = import.meta.env.VITE_MODEL;
+      const GUMROAD_PRODUCT_PERMALINK = "pfeji";
+      const GUMROAD_PAGE_URL          = "https://vixenhavoc.gumroad.com/l/pfeji";
+      const FREE_LIMIT                = 10;
       // ─────────────────────────────────────────────────
 
       let usesLeft    = parseInt(localStorage.getItem("fai_uses") ?? FREE_LIMIT);
@@ -615,25 +612,17 @@
         }
       }
 
-      // ── OPENROUTER API ─────────────────────────────
+      // ── AI PROXY — key lives on Vercel, never in browser
       async function callAI(prompt) {
-        const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+        const res = await fetch("/api/chat", {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${OPENROUTER_KEY}`,
-            "HTTP-Referer": "https://formulaai.app",
-            "X-Title": "Formula AI"
-          },
-          body: JSON.stringify({
-            model: MODEL,
-            max_tokens: 500,
-            messages: [{ role: "user", content: prompt }]
-          })
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ prompt })
         });
+        if (!res.ok) throw new Error(`Server error ${res.status}`);
         const data = await res.json();
-        if (data.error) throw new Error(data.error.message);
-        return data.choices[0].message.content.trim();
+        if (data.error) throw new Error(data.error);
+        return data.result;
       }
 
       // ── EXPLAIN ────────────────────────────────────
