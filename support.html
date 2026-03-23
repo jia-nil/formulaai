@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Support — Formula AI</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "DM Sans", sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
+      color: #1a1a1a;
+      background: #f9f9f9;
+      padding: 40px 20px 80px;
+    }
+    .container { max-width: 680px; margin: 0 auto; }
+    .logo { display: flex; align-items: center; gap: 10px; margin-bottom: 36px; }
+    .logo-mark { width: 32px; height: 32px; background: #00C896; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+    .logo-text { font-size: 16px; font-weight: 600; color: #111; }
+    h1 { font-size: 24px; font-weight: 600; color: #111; margin-bottom: 6px; }
+    .subtitle { font-size: 15px; color: #888; margin-bottom: 36px; }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 28px 32px;
+      box-shadow: 0 2px 24px rgba(0,0,0,0.06);
+      margin-bottom: 16px;
+    }
+    h2 { font-size: 16px; font-weight: 600; color: #111; margin-bottom: 14px; }
+    .faq-item { margin-bottom: 20px; }
+    .faq-q { font-weight: 500; color: #111; margin-bottom: 5px; font-size: 14px; }
+    .faq-a { color: #555; font-size: 14px; }
+    a { color: #00C896; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .contact-box {
+      background: #f0fdf9;
+      border: 1.5px solid rgba(0,200,150,0.3);
+      border-radius: 12px;
+      padding: 28px 32px;
+      text-align: center;
+      margin-top: 8px;
+    }
+    .contact-box h2 { margin-bottom: 8px; }
+    .contact-box p { color: #555; font-size: 14px; margin-bottom: 18px; }
+    .btn {
+      display: inline-block;
+      background: #00C896;
+      color: #fff;
+      border-radius: 8px;
+      padding: 10px 24px;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .btn:hover { background: #00a87e; text-decoration: none; }
+    .steps { counter-reset: steps; }
+    .step { display: flex; gap: 14px; margin-bottom: 16px; align-items: flex-start; }
+    .step-num {
+      width: 26px; height: 26px; border-radius: 50%;
+      background: #00C896; color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 600;
+      flex-shrink: 0; margin-top: 1px;
+    }
+    .step-text { font-size: 14px; color: #444; }
+    .step-text strong { color: #111; }
+    code {
+      background: #f0f0f0;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-family: monospace;
+    }
+    footer { text-align: center; margin-top: 36px; font-size: 13px; color: #bbb; }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="logo">
+      <div class="logo-mark">⚡</div>
+      <span class="logo-text">Formula AI</span>
+    </div>
+
+    <h1>Support</h1>
+    <p class="subtitle">Get help with Formula AI for Excel</p>
+
+    <!-- Getting started -->
+    <div class="card">
+      <h2>🚀 Getting started</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-text"><strong>Install the add-in</strong> from Microsoft AppSource — search "Formula AI" or use the direct link.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-text"><strong>Open the add-in</strong> in Excel via Insert → Add-ins → My Add-ins → Formula AI.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-text"><strong>Explain a formula:</strong> Click any cell with a formula, then click "Explain this formula" in the sidebar.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-text"><strong>Build a formula:</strong> Switch to the Build tab, describe what you need in plain English, and click "Build my formula."</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="card">
+      <h2>❓ Frequently asked questions</h2>
+
+      <div class="faq-item">
+        <div class="faq-q">How do I activate my Pro licence?</div>
+        <div class="faq-a">After purchasing, check your email for a licence key from Gumroad. In the add-in, click "Upgrade → Already paid? Enter licence key" and paste your key. It will be verified instantly.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">I used all 10 free uses — what now?</div>
+        <div class="faq-a">Upgrade to Formula AI Pro for unlimited uses. <a href="https://formulaai.gumroad.com" target="_blank">Click here to upgrade →</a></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">My licence key isn't working</div>
+        <div class="faq-a">Make sure you're copying the full key from your Gumroad email. Keys are case-sensitive. If the issue persists, email us and we'll sort it out within 24 hours.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">The add-in isn't showing my formula</div>
+        <div class="faq-a">Make sure the cell you clicked contains a formula (it should start with <code>=</code>). Cells with plain text or numbers won't show anything. Try clicking the cell again after opening the sidebar.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Can I get a refund?</div>
+        <div class="faq-a">Yes — if you're not happy within 7 days of purchase, email us for a full refund. No questions asked.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Is my Excel data safe?</div>
+        <div class="faq-a">Yes. Only the specific formula or description you submit is sent to our AI provider. Your spreadsheet data, other cell contents, and personal information never leave your device. See our <a href="/privacy">Privacy Policy</a> for full details.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Does it work with Excel on Mac?</div>
+        <div class="faq-a">Yes — Formula AI works on Excel for Windows, Excel for Mac, and Excel Online (browser).</div>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="contact-box">
+      <h2>Still need help?</h2>
+      <p>We usually respond within 24 hours. Reach out and we'll get you sorted.</p>
+      <a class="btn" href="mailto:support@formulaai.app">Email support</a>
+    </div>
+
+    <footer>© 2026 Formula AI. All rights reserved. · <a href="/privacy">Privacy Policy</a></footer>
+
+  </div>
+</body>
+</html>
