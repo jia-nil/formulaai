@@ -20,7 +20,7 @@ export default async function handler(req, res) {
         "X-Title": "Formula AI"
       },
       body: JSON.stringify({
-        model: "google/gemini-2.0-flash-lite:free",
+        model: "google/gemini-2.0-flash-lite",
         max_tokens: 500,
         messages: [{ role: "user", content: prompt }]
       })
