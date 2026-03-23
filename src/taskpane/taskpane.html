@@ -433,11 +433,12 @@
       // ─────────────────────────────────────────────────
       //  !! FILL THESE IN !!
       // ─────────────────────────────────────────────────
-      const OPENROUTER_KEY       = "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";
-      const GUMROAD_PRODUCT_PERMALINK = "pfeji"; // e.g. "formulaai"
-      const GUMROAD_PAGE_URL     = "https://vixenhavoc.gumroad.com/l/pfeji";       // e.g. "https://formulaai.gumroad.com/l/formulaai"
-      const MODEL                = "google/gemini-flash-1.5";
-      const FREE_LIMIT           = 10;
+     
+     
+      const GUMROAD_PRODUCT_PERMALINK = import.meta.env.VITE_GUMROAD_PRODUCT_PERMALINK;
+      const GUMROAD_PAGE_URL = import.meta.env.VITE_GUMROAD_PAGE_URL;
+      const FREE_LIMIT = Number(import.meta.env.VITE_FREE_LIMIT);
+      const MODEL = import.meta.env.VITE_MODEL;
       // ─────────────────────────────────────────────────
 
       let usesLeft    = parseInt(localStorage.getItem("fai_uses") ?? FREE_LIMIT);
